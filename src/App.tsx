@@ -7,10 +7,16 @@ import {
   ListObjectsCommandOutput,
   S3Client,
   GetObjectCommand,
+  GetObjectCommandOutput,
 } from "@aws-sdk/client-s3";
 
+// import { createWriteStream } from "fs";
+// import { readFile } from "node:fs/promises";
+import fs from "fs/promises";
 import { createWriteStream } from "fs";
 import { Readable } from "stream";
+
+import { DownloadS3Object } from "./test";
 
 import "./App.css";
 
@@ -45,15 +51,28 @@ function App() {
       },
     });
 
-    const s3Object = await client.send(
-      new GetObjectCommand({
-        Bucket: process.env.REACT_APP_BUCKET_NAME,
-        Key: objects[0].Key as string,
-      })
-    );
-    console.log(s3Object);
+    DownloadS3Object(client, objects[0].Key as string)
 
-    let file = require("fs").createWriteStream("~/Download/" + objects[0].Key as string);
+    // const s3Object = await client.send(
+    //   new GetObjectCommand({
+    //     Bucket: process.env.REACT_APP_BUCKET_NAME,
+    //     Key: objects[0].Key as string,
+    //   })
+    // );
+    // console.log(s3Object);
+
+    // // s3Object.Body.pipe(createWriteStream(fileName));
+
+    // const s3ObjectStream = s3Object.Body as Readable;
+    // // const file = createWriteStream("~/Download/" + objects[0].Key as string);
+
+    // let file = createWriteStream(("~/Download/" + objects[0].Key) as string);
+
+    // s3ObjectStream.pipe(file);
+    // const ws = file.createWriteStream(  'myfolder', 'siberian.png'));
+
+    // rs.pipe(ws);
+
     // s3.getObject(params).createReadStream().pipe(file);
 
     // await new Promise((resolve, reject) => {

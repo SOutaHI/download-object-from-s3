@@ -11,9 +11,13 @@ REACT_APP_BUCKET_NAME='***************'
 
 ## execute
 
+### start
 ```sh
 npm start
 ```
+
+### download file
+- push "download" button. and download file on s3 bucket under ~/Downloads/.
 
 ## ref
 ### uniform info
@@ -41,3 +45,12 @@ npm start
 - [How to download a File in React.js (local or from URL)](https://bobbyhadz.com/blog/react-download-file)
 - [AWS-SDK v3 - Download file with Typescript](https://stackoverflow.com/questions/68373349/aws-sdk-v3-download-file-with-typescript)
 - [S3.GetObject no longer returns the result as a string](https://github.com/aws/aws-sdk-js-v3/issues/1877)
+
+- [JavaScriptのStreams APIで細切れのデータを読み書きする](https://sbfl.net/blog/2018/05/26/javascript-streams-api/)
+- [Download happening, but not getting saved anywhere #223](https://github.com/jimmywarting/StreamSaver.js/issues/223)
+- [ストリームAPIを使いこなす](https://zenn.dev/kojiroueda/articles/e5a18b2c0dc3d4)
+- [Nodejs writable stream.write method creates a file but doesn't write in it](https://stackoverflow.com/questions/74432089/nodejs-writable-stream-write-method-creates-a-file-but-doesnt-write-in-it)
+- [TypeError: fs.createWriteStream is not a function in Node](https://stackoverflow.com/questions/72812903/typeerror-fs-createwritestream-is-not-a-function-in-node)
+- [What's the difference between a WriteSteam and WritableStream?](https://stackoverflow.com/questions/74409885/whats-the-difference-between-a-writesteam-and-writablestream)
+- [Node.js Stream を使いこなす](https://qiita.com/masakura/items/5683e8e3e655bfda6756)
+- [サーバを使わずに、フロントエンドだけでファイルダウンロードを実装する](https://walking-succession-falls.com/%E3%82%B5%E3%83%BC%E3%83%90%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%9A%E3%81%AB%E3%80%81%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%81%A0%E3%81%91%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B(typescript%E5%AF%BE%E5%BF%9C)/)

@@ -1,4 +1,7 @@
-# get-ObjectList-from-s3
+# download-object-from-s3
+
+- download object from s3 without server.
+- only use frontend.
 
 ## setup
 - create .env file, and write access key for s3.
